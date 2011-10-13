@@ -14,6 +14,7 @@
     IBOutlet UILabel *currentdate;
     IBOutlet UILabel *currenttime;
     IBOutlet UILabel *currentday;
+    IBOutlet UILabel *rotationLetter;
 
     IBOutlet UIImageView *image;
     IBOutlet UIWebView *webview;

@@ -8,10 +8,10 @@
 
 #import "FirstViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NSDateRotationScheduleFormatter.h"
 
 @implementation FirstViewController
 @synthesize webview;
-
 
 
 
@@ -41,6 +41,7 @@
 - (void)viewDidLoad
 {
 
+    
     
     // Round corners using CALayer property
     
@@ -79,9 +80,37 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated
+
 {
     
+    RotationDay rotationDayInt = [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2011-09-12"];
+    
+    if (rotationDayInt == kRotationDayA) {
+        [rotationLetter setText:@"A"];
+    }
+    else if (rotationDayInt == kRotationDayB) {
+        [rotationLetter setText:@"B"];
+    }
+    else if (rotationDayInt == kRotationDayC) {
+        [rotationLetter setText:@"C"];
+    }
+    else if (rotationDayInt == kRotationDayD) {
+        [rotationLetter setText:@"D"];
+    }
+    else if (rotationDayInt == kRotationDayE) {
+        [rotationLetter setText:@"E"];
+    }
+    else if (rotationDayInt == kRotationDayF) {
+        [rotationLetter setText:@"F"];
+    }
+    else if (rotationDayInt == kRotationDayG) {
+        [rotationLetter setText:@"G"];
+    }
+        
+
+
     //get the date today
+    
     
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"cccc, MMMM dd"];
@@ -96,6 +125,7 @@
     [timeformatter setDateFormat:@"hh:mm a"];
     
     NSString *timeToday = [timeformatter stringFromDate:[NSDate date]];
+    
     [currenttime setText:timeToday];
 
     [super viewDidAppear:animated];

@@ -13,10 +13,6 @@
 @synthesize webview;
 
 
--(IBAction)linkPressed:(UIButton *)sender
-{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.haverford.org/campus-life/dining-services/index.aspx"]];
-}
 
 - (id)initWithNibName
 :(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

@@ -45,6 +45,8 @@
     
     [[self view] addSubview:webview];
     
+
+    
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cork.jpg"]];
     
     // Webview code
@@ -65,6 +67,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+- (void) webViewDidFinishLoad:(UIWebView *)webview {
+    
+
+}
+
 
 - (void)viewDidUnload
 {

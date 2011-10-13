@@ -13,7 +13,6 @@
     
     
 }
--(IBAction)linkPressed:(UIButton *)sender;
 
 @property (nonatomic, retain) UIWebView *webview;
 
