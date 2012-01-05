@@ -40,7 +40,7 @@
 					<object class="IBUIWebView" id="833950544">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
-						<string key="NSFrame">{{6, 12}, {309, 313}}</string>
+						<string key="NSFrame">{{20, 161}, {195, 165}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:693</string>
@@ -4447,7 +4447,7 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 					<object class="IBUIButton" id="54783534">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{120, 354}, {80, 37}}</string>
+						<string key="NSFrame">{{186, 6}, {80, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
@@ -4573,9 +4573,9 @@ AAgAAAAIAAIACAACAAAAAgAAAAEAAQABAAE</bytes>
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
+							<reference ref="1014005548"/>
 							<reference ref="833950544"/>
 							<reference ref="54783534"/>
-							<reference ref="1014005548"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
