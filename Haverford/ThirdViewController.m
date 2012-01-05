@@ -12,26 +12,12 @@
 @implementation ThirdViewController
 @synthesize webview;
 
-- (NSString *)formattedStringUsingFormat:(NSString *)dateFormat
-{
-    NSCalendar *cal = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:dateFormat];
-    [formatter setCalendar:cal];
-    [formatter setLocale:[NSLocale currentLocale]];
-    NSString *ret = [formatter stringFromDate:[NSDate date]];
-    
-    
-    [self formattedStringUsingFormat:@"yyyyMM"];
-    
-    [display setText: [NSString stringWithFormat:@"%s", ret]];
-}
+
 -(IBAction)linkPressed:(UIButton *)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.haverford.org/campus-life/dining-services/index.aspx"]];
 }
 
-    
 - (id)initWithNibName
 :(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -69,7 +55,6 @@
 self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cork.jpg"]];
 
 // Webview code
-    
     
 
 NSString *urlAddress = @"http://www.fitztepper.com/lunchsched.jpg";

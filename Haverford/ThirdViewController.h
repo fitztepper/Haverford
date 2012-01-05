@@ -10,8 +10,7 @@
 
 @interface ThirdViewController : UIViewController{
     IBOutlet UIWebView *webview;
-    IBOutlet UILabel *display;
-
+    
     
 }
 -(IBAction)linkPressed:(UIButton *)sender;
