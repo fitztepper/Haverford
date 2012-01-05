@@ -10,6 +10,12 @@
 
 @implementation FirstViewController
 
+-(IBAction)launchFeedback:(UIButton *)sender 
+{
+    [TestFlight openFeedbackView];
+}
+
+
 -(IBAction)linkPressed:(UIButton *)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"mailto:fitztepper@me.com"]];

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestFlight.h"
 
 @interface FirstViewController : UIViewController
 
 -(IBAction)linkPressed:(UIButton *)sender;
+
+-(IBAction)launchFeedback: (UIButton *)sender;
 
 @end

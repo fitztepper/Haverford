@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestFlight.h"
 
 #import "FirstViewController.h"
 
@@ -22,6 +23,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [TestFlight takeOff:@"f7b0a50aefa6c32b12035fde0a47cef7_NTA1MjAyMDEyLTAxLTAxIDIxOjI2OjQ2LjU3MDIyMw"];
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
