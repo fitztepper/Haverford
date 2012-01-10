@@ -25,10 +25,11 @@
     if (self) {
         self.title = NSLocalizedString(@"Home", @"Home");
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
+        
+
     }
     return self;
     
-    //to refresh the dates when each view loads
     
 }
 							
@@ -111,6 +112,7 @@
     //Load the request in the UIWebView.
     [webview loadRequest:requestObj];
     
+   
 }
 
 - (void)viewDidUnload
