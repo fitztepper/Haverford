@@ -32,6 +32,9 @@
 		C4E0144214B2A33600FADF36 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144114B2A33600FADF36 /* menu.png */; };
 		C4E0144414B2A82E00FADF36 /* cork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144314B2A82D00FADF36 /* cork.jpg */; };
 		C4E0144614B2AC3200FADF36 /* ths1.0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144514B2AC3200FADF36 /* ths1.0.png */; };
+		C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC114BC020800B3D298 /* Tuesday.jpg */; };
+		C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC314BC037100B3D298 /* Monday.jpg */; };
+		C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC514BC044400B3D298 /* Wednesday.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		C4E0144114B2A33600FADF36 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		C4E0144314B2A82D00FADF36 /* cork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cork.jpg; sourceTree = "<group>"; };
 		C4E0144514B2AC3200FADF36 /* ths1.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ths1.0.png; sourceTree = "<group>"; };
+		C4E37FC114BC020800B3D298 /* Tuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tuesday.jpg; sourceTree = "<group>"; };
+		C4E37FC314BC037100B3D298 /* Monday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monday.jpg; sourceTree = "<group>"; };
+		C4E37FC514BC044400B3D298 /* Wednesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wednesday.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,9 @@
 				C4E0143314B2A25D00FADF36 /* home.png */,
 				C4E0143514B2A2BE00FADF36 /* schedule.png */,
 				C4E0144114B2A33600FADF36 /* menu.png */,
+				C4E37FC314BC037100B3D298 /* Monday.jpg */,
+				C4E37FC114BC020800B3D298 /* Tuesday.jpg */,
+				C4E37FC514BC044400B3D298 /* Wednesday.jpg */,
 				C4E0144314B2A82D00FADF36 /* cork.jpg */,
 				C4D9F68214B29FD100D87536 /* Supporting Files */,
 			);
@@ -283,6 +292,9 @@
 				C4E0144614B2AC3200FADF36 /* ths1.0.png in Resources */,
 				C48E1E2114B56C9C00C18762 /* README.txt in Resources */,
 				C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */,
+				C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */,
+				C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */,
+				C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
