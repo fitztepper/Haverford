@@ -51,27 +51,44 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+
+   }
+
+- (void)viewDidUnload
+
+{
     
+    [super viewDidUnload];
+    // Release any retained subviews of the main view.
+    // e.g. self.myOutlet = nil;
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+}
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    
     //get the date today
     
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
     [dateformatter setDateFormat:@"cccc, MMMM dd"];
     
     NSString *dateToday = [dateformatter stringFromDate:[NSDate date]];
- 
+    
     [currentdate setText:dateToday];
     
     
     //get the time today
-    
     NSDateFormatter *timeformatter = [[NSDateFormatter alloc] init];
     [timeformatter setDateFormat:@"hh:mm a"];
-
-    NSString *timeToday = [timeformatter stringFromDate:[NSDate date]];
     
+    NSString *timeToday = [timeformatter stringFromDate:[NSDate date]];
     [currenttime setText:timeToday];
+
+    [super viewDidAppear:animated];
     
     //get the day of week
     
@@ -112,25 +129,8 @@
     //Load the request in the UIWebView.
     [webview loadRequest:requestObj];
     
-   
-}
+    
 
-- (void)viewDidUnload
-
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -140,6 +140,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
+
 	[super viewDidDisappear:animated];
 }
 
