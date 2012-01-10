@@ -104,7 +104,6 @@
     
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
     NSInteger weekday   = [components weekday];
-    NSString *urlString;
     switch(weekday){
         case 1: // sunday
             image.image = [UIImage imageNamed:@"Monday.jpg"];
@@ -131,16 +130,10 @@
             
             }
       
-    NSURL *url = [NSURL URLWithString:urlString];
-    
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    
-    //Load the request in the UIWebView.
-    [webview loadRequest:requestObj];
-    
     
 
 }
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
