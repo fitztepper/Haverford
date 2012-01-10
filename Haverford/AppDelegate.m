@@ -65,6 +65,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    [[NSNotificationCenter defaultCenter] postNotification:@"refreshDateCheck"];
 
 }
     /*

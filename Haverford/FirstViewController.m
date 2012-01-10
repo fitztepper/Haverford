@@ -27,6 +27,10 @@
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
     }
     return self;
+    
+    //to refresh the dates when each view loads
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myMethod) name:@"refreshDateCheck" object:nil];
 }
 							
 - (void)didReceiveMemoryWarning
@@ -39,7 +43,8 @@
 
 - (void)viewDidLoad
 {
-    
+   
+
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cork.jpg"]];
 
@@ -47,6 +52,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
+}
+
+-(void)myMethod{
+
     //get the date today
     
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
@@ -207,8 +216,8 @@
         
     }
     
-}
 
+}
 
 
 - (void)viewDidUnload
