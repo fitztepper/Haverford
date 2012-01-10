@@ -30,7 +30,6 @@
     
     //to refresh the dates when each view loads
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myMethod) name:@"refreshDateCheck" object:nil];
 }
 							
 - (void)didReceiveMemoryWarning
@@ -52,9 +51,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-}
 
--(void)myMethod{
 
     //get the date today
     
@@ -77,148 +74,44 @@
     
     //get the day of week
     
-    NSDateFormatter *dayofweekformatter = [[NSDateFormatter alloc] init];
-    [dayofweekformatter setDateFormat:@"cccc"];
-    
-    NSString *DayOfWeek = [dayofweekformatter stringFromDate:[NSDate date]];
-    
-    
-    NSString *Monday = @"Monday";
-    NSString *Tuesday = @"Tuesday";
-    NSString *Wednesday = @"Wednesday";
-    NSString *Thursday = @"Thursday";
-    NSString *Friday = @"Friday";
-    NSString *Saturday = @"Saturday";
-    NSString *Sunday = @"Sunday";
-
-
-
-    if ([DayOfWeek isEqualToString:Monday])
-    
-    { // Webview code
-        
-        NSString *urlAddress = @"http://www.google.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-
-
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:[NSDate date]];
+    NSInteger weekday   = [components weekday];
+    NSString *urlString;
+    switch(weekday){
+        case 1: // sunday
+            urlString = @"http://google.com";
+            break;
+        case 2:
+            urlString = @"http://twitter.com";
+            break;
+        case 3:
+            urlString = @"http://facebook.com";
+            break;
+        case 4:
+            urlString = @"http://yahoo.com";
+            break;
+        case 5:
+            urlString = @"http://mashable.com";
+            break;
+        case 6:
+            urlString = @"http://bbc.co.uk";
+            break;
+        case 7: // saturday
+            urlString = @"http://stackoverflow.com";
+            break;
+        default:
+            urlString = @"http://google.com?q=weekday+is+never+this!";
+            break;
     }
     
-    else if ([DayOfWeek isEqualToString:Tuesday])
-
-        
-    { // Webview code
-        
-        NSString *urlAddress = @"http://www.cnn.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-
-
-    }
-    else if ([DayOfWeek isEqualToString:Wednesday])
-
-        
-    {// Webview code
-        
-        NSString *urlAddress = @"http://www.reddit.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-      
-        
-    } 
+    NSURL *url = [NSURL URLWithString:urlString];
     
-    else if ([DayOfWeek isEqualToString:Thursday])
-
-        
-    {// Webview code
-        
-        NSString *urlAddress = @"http://www.foxnews.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-        
-    } 
-    else if ([DayOfWeek isEqualToString:Friday])
-
-        
-    {// Webview code
-        
-        NSString *urlAddress = @"http://www.techcrunch.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-        
-    }
-    else if ([DayOfWeek isEqualToString:Saturday])
-
-        
-    {// Webview code
-        
-        NSString *urlAddress = @"http://www.aol.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-        
-    } 
-    else if ([DayOfWeek isEqualToString:Sunday])
-        
-    {// Webview code
-        
-        NSString *urlAddress = @"http://www.yahoo.com";
-        
-        //Create a URL object.
-        NSURL *url = [NSURL URLWithString:urlAddress];
-        
-        //URL Requst Object
-        NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-        
-        //Load the request in the UIWebView.
-        [webview loadRequest:requestObj];
-        
-    }
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     
-
+    //Load the request in the UIWebView.
+    [webview loadRequest:requestObj];
+    
 }
-
 
 - (void)viewDidUnload
 
