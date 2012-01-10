@@ -9,9 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "TestFlight.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController {
+    
+    IBOutlet UILabel *currentdate;
+    IBOutlet UILabel *currenttime;
+    IBOutlet UILabel *currentday;
 
--(IBAction)linkPressed:(UIButton *)sender;
+    IBOutlet UIWebView *webview;
+
+
+}
+
+@property (nonatomic, retain) UIWebView *webview;
 
 -(IBAction)launchFeedback: (UIButton *)sender;
 
