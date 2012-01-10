@@ -15,13 +15,11 @@
     IBOutlet UILabel *currenttime;
     IBOutlet UILabel *currentday;
 
+    IBOutlet UIImageView *image;
     IBOutlet UIWebView *webview;
-
-
 }
 
 @property (nonatomic, retain) UIWebView *webview;
 
--(IBAction)launchFeedback: (UIButton *)sender;
 
 @end
