@@ -7,15 +7,12 @@
 //
 
 #import "FirstViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation FirstViewController
 @synthesize webview;
 
 
--(IBAction)launchFeedback:(UIButton *)sender 
-{
-    [TestFlight openFeedbackView];
-}
 
 
 
@@ -43,7 +40,20 @@
 
 - (void)viewDidLoad
 {
-   
+
+    
+    // Round corners using CALayer property
+    
+    [[image layer] setCornerRadius:10];
+    [image setClipsToBounds:YES];
+    
+    // Create colored border using CALayer property 
+    [[image layer] setBorderColor:
+     [[UIColor colorWithRed:0 green:0. blue:0 alpha:1] CGColor]];
+    // [[UIColor colorWithWhite:1 alpha:1] CGColor]];
+    [[image layer] setBorderWidth:2.75];
+    
+    [[self view] addSubview:image];
 
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cork.jpg"]];
@@ -97,31 +107,30 @@
     NSString *urlString;
     switch(weekday){
         case 1: // sunday
-            urlString = @"http://google.com";
+            image.image = [UIImage imageNamed:@"Monday.jpg"];
             break;
         case 2:
-            urlString = @"http://twitter.com";
+            image.image = [UIImage imageNamed:@"Monday.jpg"];
+            
             break;
         case 3:
-            urlString = @"http://facebook.com";
+            image.image = [UIImage imageNamed:@"Tuesday.jpg"];
             break;
         case 4:
-            urlString = @"http://yahoo.com";
+            image.image = [UIImage imageNamed:@"Wednesday.jpg"];
             break;
         case 5:
-            urlString = @"http://mashable.com";
+            image.image = [UIImage imageNamed:@"Monday.jpg"];
             break;
         case 6:
-            urlString = @"http://bbc.co.uk";
+            image.image = [UIImage imageNamed:@"Tuesday.jpg"];
             break;
         case 7: // saturday
-            urlString = @"http://stackoverflow.com";
+            image.image = [UIImage imageNamed:@"Monday.jpg"];
             break;
-        default:
-            urlString = @"http://google.com?q=weekday+is+never+this!";
-            break;
-    }
-    
+            
+            }
+      
     NSURL *url = [NSURL URLWithString:urlString];
     
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
