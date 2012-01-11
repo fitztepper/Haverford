@@ -13,7 +13,6 @@
     
     IBOutlet UILabel *currentdate;
     IBOutlet UILabel *currenttime;
-    IBOutlet UILabel *currentday;
     IBOutlet UILabel *letterday;
 
     IBOutlet UIImageView *image;

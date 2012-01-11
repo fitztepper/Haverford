@@ -44,13 +44,13 @@
     
     // Round corners using CALayer property
     
-    [[image layer] setCornerRadius:10];
+    [[image layer] setCornerRadius:5];
     [image setClipsToBounds:YES];
     
-    // Create colored border using CALayer property 
-    [[image layer] setBorderColor:
+     //Create colored border using CALayer property 
+   [[image layer] setBorderColor:
      [[UIColor colorWithRed:0 green:0. blue:0 alpha:1] CGColor]];
-    // [[UIColor colorWithWhite:1 alpha:1] CGColor]];
+     [[UIColor colorWithWhite:1 alpha:1] CGColor];
     [[image layer] setBorderWidth:2.75];
     
     [[self view] addSubview:image];
@@ -86,7 +86,7 @@
     
     
     NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
-    [dateformatter setDateFormat:@"cccc, MMMM dd"];
+        [dateformatter setDateFormat:@"cccc, MMMM dd"];
     
     NSString *dateToday = [dateformatter stringFromDate:[NSDate date]];
     
@@ -111,20 +111,20 @@
         case 1: // sunday
             image.image = [UIImage imageNamed:@"Monday.jpg"];
             break;
-        case 2:
+        case 2: // monday
             image.image = [UIImage imageNamed:@"Monday.jpg"];
             
             break;
-        case 3:
+        case 3: //tuesday
             image.image = [UIImage imageNamed:@"Tuesday.jpg"];
             break;
-        case 4:
+        case 4: //wednesday
             image.image = [UIImage imageNamed:@"Wednesday.jpg"];
             break;
-        case 5:
+        case 5: //thursday
             image.image = [UIImage imageNamed:@"Monday.jpg"];
             break;
-        case 6:
+        case 6: // friday
             image.image = [UIImage imageNamed:@"Tuesday.jpg"];
             break;
         case 7: // saturday
@@ -133,7 +133,23 @@
             
             }
       
+    NSDateFormatter *dayformatter = [[NSDateFormatter alloc] init];
+    [dayformatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *LetterDay = [dayformatter stringFromDate:[NSDate date]];
+
     
+    
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    [dictionary setObject:@"A Day" forKey:@"2012-01-11"];
+    [dictionary setObject:@"B Day" forKey:@"2012-01-12"];
+    [dictionary setObject:@"C Day" forKey:@"2012-01-13"];
+    [dictionary setObject:@"D Day" forKey:@"2012-01-17"];
+    [dictionary setObject:@"E Day" forKey:@"2012-01-18"];
+
+    
+    
+    //[letterday setText:LetterDay];
+    [letterday setText:[dictionary objectForKey:LetterDay]];
 
 }
 
