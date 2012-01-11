@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 @implementation SecondViewController
 @synthesize webview;
+@synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -59,10 +60,12 @@
 	//URL Requst Object
 	NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
 	
+    
+    
 	//Load the request in the UIWebView.
 	[webview loadRequest:requestObj];
     
-    
+
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.

@@ -15,5 +15,6 @@
 }
 
 @property (nonatomic, retain) UIWebView *webview;
+@property(nonatomic, readonly, retain) UIScrollView *scrollView;
 
 @end

@@ -10,6 +10,7 @@
 		C48E1E2014B56C9C00C18762 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C48E1E1C14B56C9C00C18762 /* libTestFlight.a */; };
 		C48E1E2114B56C9C00C18762 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C48E1E1D14B56C9C00C18762 /* README.txt */; };
 		C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = C48E1E1E14B56C9C00C18762 /* release_notes.txt */; };
+		C48E5BB514BDCF5E00380DCB /* ths1.0.png in Resources */ = {isa = PBXBuildFile; fileRef = C48E5BB414BDCF5E00380DCB /* ths1.0.png */; };
 		C4D9F67C14B29FD100D87536 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D9F67B14B29FD100D87536 /* UIKit.framework */; };
 		C4D9F67E14B29FD100D87536 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D9F67D14B29FD100D87536 /* Foundation.framework */; };
 		C4D9F68014B29FD100D87536 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D9F67F14B29FD100D87536 /* CoreGraphics.framework */; };
@@ -31,7 +32,6 @@
 		C4E0144014B2A30900FADF36 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */; };
 		C4E0144214B2A33600FADF36 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144114B2A33600FADF36 /* menu.png */; };
 		C4E0144414B2A82E00FADF36 /* cork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144314B2A82D00FADF36 /* cork.jpg */; };
-		C4E0144614B2AC3200FADF36 /* ths1.0.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144514B2AC3200FADF36 /* ths1.0.png */; };
 		C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC114BC020800B3D298 /* Tuesday.jpg */; };
 		C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC314BC037100B3D298 /* Monday.jpg */; };
 		C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC514BC044400B3D298 /* Wednesday.jpg */; };
@@ -52,6 +52,7 @@
 		C48E1E1D14B56C9C00C18762 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		C48E1E1E14B56C9C00C18762 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		C48E1E1F14B56C9C00C18762 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		C48E5BB414BDCF5E00380DCB /* ths1.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ths1.0.png; sourceTree = "<group>"; };
 		C4D9F67714B29FD100D87536 /* Haverford.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haverford.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D9F67B14B29FD100D87536 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C4D9F67D14B29FD100D87536 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,7 +82,6 @@
 		C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		C4E0144114B2A33600FADF36 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		C4E0144314B2A82D00FADF36 /* cork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cork.jpg; sourceTree = "<group>"; };
-		C4E0144514B2AC3200FADF36 /* ths1.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ths1.0.png; sourceTree = "<group>"; };
 		C4E37FC114BC020800B3D298 /* Tuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tuesday.jpg; sourceTree = "<group>"; };
 		C4E37FC314BC037100B3D298 /* Monday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monday.jpg; sourceTree = "<group>"; };
 		C4E37FC514BC044400B3D298 /* Wednesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wednesday.jpg; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		C4D9F66C14B29FD100D87536 = {
 			isa = PBXGroup;
 			children = (
-				C4E0144514B2AC3200FADF36 /* ths1.0.png */,
+				C48E5BB414BDCF5E00380DCB /* ths1.0.png */,
 				C48E1E1B14B56C9C00C18762 /* TestFlightSDK0 */,
 				C4D9F68114B29FD100D87536 /* Haverford */,
 				C4D9F6AD14B29FD200D87536 /* HaverfordTests */,
@@ -289,12 +289,12 @@
 				C4E0144014B2A30900FADF36 /* ThirdViewController.xib in Resources */,
 				C4E0144214B2A33600FADF36 /* menu.png in Resources */,
 				C4E0144414B2A82E00FADF36 /* cork.jpg in Resources */,
-				C4E0144614B2AC3200FADF36 /* ths1.0.png in Resources */,
 				C48E1E2114B56C9C00C18762 /* README.txt in Resources */,
 				C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */,
 				C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */,
 				C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */,
 				C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */,
+				C48E5BB514BDCF5E00380DCB /* ths1.0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
