@@ -76,7 +76,6 @@
 						<string key="NSFrame">{{22, 40}, {273, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:328</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -150,6 +149,7 @@
 						<nil key="IBUIHighlightedColor"/>
 						<int key="IBUIBaselineAdjustment">1</int>
 						<float key="IBUIMinimumFontSize">10</float>
+						<int key="IBUITextAlignment">1</int>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
 							<double key="pointSize">25</double>
@@ -210,11 +210,11 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">rotationLetter</string>
+						<string key="label">letterday</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="83593587"/>
 					</object>
-					<int key="connectionID">56</int>
+					<int key="connectionID">57</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -291,7 +291,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">56</int>
+			<int key="maxID">57</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -304,7 +304,6 @@
 						<string key="currenttime">UILabel</string>
 						<string key="image">UIImageView</string>
 						<string key="letterday">UILabel</string>
-						<string key="rotationLetter">UILabel</string>
 						<string key="webview">UIWebView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -326,10 +325,6 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="letterday">
 							<string key="name">letterday</string>
-							<string key="candidateClassName">UILabel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="rotationLetter">
-							<string key="name">rotationLetter</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="webview">

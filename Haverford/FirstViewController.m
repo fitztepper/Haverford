@@ -8,7 +8,6 @@
 
 #import "FirstViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "NSDateRotationScheduleFormatter.h"
 
 @implementation FirstViewController
 @synthesize webview;
@@ -83,32 +82,6 @@
 
 {
     
-    RotationDay rotationDayInt = [NSDate JL_currentRotationDayWithSchoolYearBeginningOnDateString:@"2011-09-12"];
-    
-    if (rotationDayInt == kRotationDayA) {
-        [rotationLetter setText:@"A"];
-    }
-    else if (rotationDayInt == kRotationDayB) {
-        [rotationLetter setText:@"B"];
-    }
-    else if (rotationDayInt == kRotationDayC) {
-        [rotationLetter setText:@"C"];
-    }
-    else if (rotationDayInt == kRotationDayD) {
-        [rotationLetter setText:@"D"];
-    }
-    else if (rotationDayInt == kRotationDayE) {
-        [rotationLetter setText:@"E"];
-    }
-    else if (rotationDayInt == kRotationDayF) {
-        [rotationLetter setText:@"F"];
-    }
-    else if (rotationDayInt == kRotationDayG) {
-        [rotationLetter setText:@"G"];
-    }
-        
-
-
     //get the date today
     
     
