@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestFlight.h"
+
 
 @interface ThirdViewController : UIViewController{
     IBOutlet UIWebView *webview;

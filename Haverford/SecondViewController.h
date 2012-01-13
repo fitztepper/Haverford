@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TestFlight.h"
 
 @interface SecondViewController : UIViewController{
     IBOutlet UIWebView *webview;

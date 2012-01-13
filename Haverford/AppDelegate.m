@@ -15,6 +15,7 @@
 
 #import "ThirdViewController.h"
 
+#import "FourthViewController.h"
 
 @implementation AppDelegate
 
@@ -22,7 +23,12 @@
 @synthesize tabBarController = _tabBarController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+
+
+
 {
+    sleep(1.2);
+
 
     [TestFlight takeOff:@"f7b0a50aefa6c32b12035fde0a47cef7_NTA1MjAyMDEyLTAxLTAxIDIxOjI2OjQ2LjU3MDIyMw"];
 
@@ -30,13 +36,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
+    
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
     
-    
     UIViewController *viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
+    
+    UIViewController *viewController4 = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
 
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController3, viewController2, nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController3, viewController2, viewController4,  nil];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;

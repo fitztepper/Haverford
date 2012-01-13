@@ -8,6 +8,8 @@
 
 #import "ThirdViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TestFlight.h"
+
 
 @implementation ThirdViewController
 @synthesize webview;
@@ -23,7 +25,7 @@
         self.tabBarItem.image = [UIImage imageNamed:@"menu"];
     }
     return self;
-}
+  }
 
 - (void)didReceiveMemoryWarning
 {
@@ -42,36 +44,41 @@
 
 // Create colored border using CALayer property 
 [[webview layer] setBorderColor:
- [[UIColor colorWithRed:0.52 green:0.09 blue:0.07 alpha:1] CGColor]];
+ [[UIColor colorWithRed:.0 green:0 blue:0 alpha:1] CGColor]];
 // [[UIColor colorWithWhite:1 alpha:1] CGColor]];
 [[webview layer] setBorderWidth:2.75];
 
 [[self view] addSubview:webview];
 
-self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cork.jpg"]];
-
-// ** So I think I used the method we talked about..I created three strings, one for first half of URL, one for the variable date section (Which I used NSDATE and arranged it into the same format Sodexo uses, and the third string for the final half of the url. Then I combined the Urls. It works now, but I guess we have no way to test it until Sodexo updates their new February Menu. Let me know what you think.
+    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"chalk.jpg"]];
+    
+    // ** So I think I used the method we talked about..I created three strings, one for first half of URL, one for the variable date section (Which I used NSDATE and arranged it into the same format Sodexo uses, and the third string for the final half of the url. Then I combined the Urls. It works now, but I guess we have no way to test it until Sodexo updates their new February Menu. Let me know what you think.
     
     NSDate *date = [NSDate date];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"YYYYMM"];
     NSString *dateString = [dateFormat stringFromDate:date];  
-        
+    
     NSString *firsturl = @"https://www.sodexoeducation.com/MenusPdf/";
     
     NSString *secondurl = @"_72_829_1_1.pdf";
     
     NSString *urlAddress = [NSString stringWithFormat:@"%@%@%@", firsturl, dateString, secondurl];
     
-//Create a URL object.
-NSURL *url = [NSURL URLWithString:urlAddress];
-
-//URL Requst Object
-NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-
-//Load the request in the UIWebView.
-[webview loadRequest:requestObj];
-
+    //Create a URL object.
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    
+    //URL Requst Object
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    
+    //Load the request in the UIWebView.
+    [webview loadRequest:requestObj];
+    
+    
+    
+    
+    
 
 
 [super viewDidLoad];

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40B53A714BFB72D00D517CB /* chalk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C40B53A614BFB72D00D517CB /* chalk.jpg */; };
+		C447AF1C14C0AFA5002D97FD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C447AF1B14C0AFA5002D97FD /* Default.png */; };
+		C447AF1F14C0AFB9002D97FD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C447AF1E14C0AFB9002D97FD /* Default@2x.png */; };
 		C48E1E2014B56C9C00C18762 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C48E1E1C14B56C9C00C18762 /* libTestFlight.a */; };
 		C48E1E2114B56C9C00C18762 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C48E1E1D14B56C9C00C18762 /* README.txt */; };
 		C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = C48E1E1E14B56C9C00C18762 /* release_notes.txt */; };
@@ -31,10 +34,12 @@
 		C4E0143F14B2A30900FADF36 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E0143D14B2A30800FADF36 /* ThirdViewController.m */; };
 		C4E0144014B2A30900FADF36 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */; };
 		C4E0144214B2A33600FADF36 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144114B2A33600FADF36 /* menu.png */; };
-		C4E0144414B2A82E00FADF36 /* cork.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144314B2A82D00FADF36 /* cork.jpg */; };
 		C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC114BC020800B3D298 /* Tuesday.jpg */; };
 		C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC314BC037100B3D298 /* Monday.jpg */; };
 		C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC514BC044400B3D298 /* Wednesday.jpg */; };
+		C4EED59B14BE84350090483A /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EED59A14BE84340090483A /* gears.png */; };
+		C4EED5AB14BE85760090483A /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EED5A914BE85760090483A /* FourthViewController.m */; };
+		C4EED5AC14BE85760090483A /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EED5AA14BE85760090483A /* FourthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40B53A614BFB72D00D517CB /* chalk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chalk.jpg; sourceTree = "<group>"; };
+		C447AF1B14C0AFA5002D97FD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C447AF1E14C0AFB9002D97FD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C48E1E1C14B56C9C00C18762 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		C48E1E1D14B56C9C00C18762 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		C48E1E1E14B56C9C00C18762 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -81,10 +89,13 @@
 		C4E0143D14B2A30800FADF36 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		C4E0144114B2A33600FADF36 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		C4E0144314B2A82D00FADF36 /* cork.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cork.jpg; sourceTree = "<group>"; };
 		C4E37FC114BC020800B3D298 /* Tuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tuesday.jpg; sourceTree = "<group>"; };
 		C4E37FC314BC037100B3D298 /* Monday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monday.jpg; sourceTree = "<group>"; };
 		C4E37FC514BC044400B3D298 /* Wednesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wednesday.jpg; sourceTree = "<group>"; };
+		C4EED59A14BE84340090483A /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
+		C4EED5A814BE85760090483A /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		C4EED5A914BE85760090483A /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		C4EED5AA14BE85760090483A /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +137,8 @@
 		C4D9F66C14B29FD100D87536 = {
 			isa = PBXGroup;
 			children = (
+				C447AF1E14C0AFB9002D97FD /* Default@2x.png */,
+				C447AF1B14C0AFA5002D97FD /* Default.png */,
 				C48E5BB414BDCF5E00380DCB /* ths1.0.png */,
 				C48E1E1B14B56C9C00C18762 /* TestFlightSDK0 */,
 				C4D9F68114B29FD100D87536 /* Haverford */,
@@ -169,13 +182,17 @@
 				C4E0143C14B2A30800FADF36 /* ThirdViewController.h */,
 				C4E0143D14B2A30800FADF36 /* ThirdViewController.m */,
 				C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */,
+				C4EED5A814BE85760090483A /* FourthViewController.h */,
+				C4EED5A914BE85760090483A /* FourthViewController.m */,
+				C4EED5AA14BE85760090483A /* FourthViewController.xib */,
+				C40B53A614BFB72D00D517CB /* chalk.jpg */,
 				C4E0143314B2A25D00FADF36 /* home.png */,
 				C4E0143514B2A2BE00FADF36 /* schedule.png */,
+				C4EED59A14BE84340090483A /* gears.png */,
 				C4E0144114B2A33600FADF36 /* menu.png */,
 				C4E37FC314BC037100B3D298 /* Monday.jpg */,
 				C4E37FC114BC020800B3D298 /* Tuesday.jpg */,
 				C4E37FC514BC044400B3D298 /* Wednesday.jpg */,
-				C4E0144314B2A82D00FADF36 /* cork.jpg */,
 				C4D9F68214B29FD100D87536 /* Supporting Files */,
 			);
 			path = Haverford;
@@ -288,13 +305,17 @@
 				C4E0143614B2A2BE00FADF36 /* schedule.png in Resources */,
 				C4E0144014B2A30900FADF36 /* ThirdViewController.xib in Resources */,
 				C4E0144214B2A33600FADF36 /* menu.png in Resources */,
-				C4E0144414B2A82E00FADF36 /* cork.jpg in Resources */,
 				C48E1E2114B56C9C00C18762 /* README.txt in Resources */,
 				C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */,
 				C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */,
 				C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */,
 				C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */,
 				C48E5BB514BDCF5E00380DCB /* ths1.0.png in Resources */,
+				C4EED59B14BE84350090483A /* gears.png in Resources */,
+				C4EED5AC14BE85760090483A /* FourthViewController.xib in Resources */,
+				C40B53A714BFB72D00D517CB /* chalk.jpg in Resources */,
+				C447AF1C14C0AFA5002D97FD /* Default.png in Resources */,
+				C447AF1F14C0AFB9002D97FD /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +355,7 @@
 				C4D9F68F14B29FD100D87536 /* FirstViewController.m in Sources */,
 				C4D9F69614B29FD100D87536 /* SecondViewController.m in Sources */,
 				C4E0143F14B2A30900FADF36 /* ThirdViewController.m in Sources */,
+				C4EED5AB14BE85760090483A /* FourthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,9 @@
 
 #import "SecondViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TestFlight.h"
+
+
 @implementation SecondViewController
 @synthesize webview;
 @synthesize scrollView;
@@ -40,7 +43,7 @@
     
     // Create colored border using CALayer property 
     [[webview layer] setBorderColor:
-     [[UIColor colorWithRed:0.52 green:0.09 blue:0.07 alpha:1] CGColor]];
+     [[UIColor colorWithRed:0 green:0 blue:0 alpha:1] CGColor]];
     // [[UIColor colorWithWhite:1 alpha:1] CGColor]];
     [[webview layer] setBorderWidth:2.75];
     
@@ -48,7 +51,7 @@
     
 
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"cork.jpg"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"chalk.jpg"]];
     
     // Webview code
     

@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-///test change for commit
 
 #import <UIKit/UIKit.h>
 #import "TestFlight.h"
