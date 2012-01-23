@@ -51,7 +51,7 @@
 [[self view] addSubview:webview];
 
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"chalk.jpg"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
     
     // ** So I think I used the method we talked about..I created three strings, one for first half of URL, one for the variable date section (Which I used NSDATE and arranged it into the same format Sodexo uses, and the third string for the final half of the url. Then I combined the Urls. It works now, but I guess we have no way to test it until Sodexo updates their new February Menu. Let me know what you think.
     

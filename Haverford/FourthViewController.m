@@ -2,22 +2,22 @@
 //  FourthViewController.m
 //  Haverford
 //
-//  Created by Fitz Tepper on 1/11/12.
+//  Created by Fitz Tepper on 1/18/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import "FourthViewController.h"
-#import "TestFlight.h"
 
 @implementation FourthViewController
 
-- (id)initWithNibName
-:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Settings", @"Settings");
         self.tabBarItem.image = [UIImage imageNamed:@"gears"];
+        
+        
     }
     return self;
 }
@@ -42,12 +42,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"chalk.jpg"]];
-    
-    
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
 
-
-    
 }
 
 - (void)viewDidUnload

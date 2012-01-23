@@ -56,7 +56,7 @@
     [[self view] addSubview:image];
 
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"chalk.jpg"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -140,10 +140,10 @@
             image.image = [UIImage imageNamed:@"Wednesday.jpg"];
             break;
         case 5: //thursday
-            image.image = [UIImage imageNamed:@"Monday.jpg"];
+            image.image = [UIImage imageNamed:@"Thursday.jpg"];
             break;
         case 6: // friday
-            image.image = [UIImage imageNamed:@"Tuesday.jpg"];
+            image.image = [UIImage imageNamed:@"Friday.jpg"];
             break;
         case 7: // saturday
             image.image = [UIImage imageNamed:@"Monday.jpg"];

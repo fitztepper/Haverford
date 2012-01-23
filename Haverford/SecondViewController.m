@@ -51,11 +51,11 @@
     
 
     
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"chalk.jpg"]];
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
     
     // Webview code
     
-    NSString *urlAddress = @"http://www.fitztepper.com/sched.jpg";
+    NSString *urlAddress = @"http://media.fitztepper.com/sched.jpg";
     
     //Create a URL object.
 	NSURL *url = [NSURL URLWithString:urlAddress];

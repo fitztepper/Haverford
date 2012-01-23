@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C40B53A714BFB72D00D517CB /* chalk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C40B53A614BFB72D00D517CB /* chalk.jpg */; };
+		C40AA51814C7DC0E0032F117 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C40AA51614C7DC0E0032F117 /* Icon.png */; };
+		C40AA51914C7DC0E0032F117 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C40AA51714C7DC0E0032F117 /* Icon@2x.png */; };
+		C433290B14C7B2D600309201 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C433290914C7B2D600309201 /* FourthViewController.m */; };
+		C433290C14C7B2D600309201 /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433290A14C7B2D600309201 /* FourthViewController.xib */; };
 		C447AF1C14C0AFA5002D97FD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C447AF1B14C0AFA5002D97FD /* Default.png */; };
 		C447AF1F14C0AFB9002D97FD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C447AF1E14C0AFB9002D97FD /* Default@2x.png */; };
+		C481E23D14C7B22700384FE4 /* Monday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C481E23814C7B22700384FE4 /* Monday.jpg */; };
+		C481E23E14C7B22700384FE4 /* Thursday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C481E23914C7B22700384FE4 /* Thursday.jpg */; };
+		C481E23F14C7B22700384FE4 /* Tuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C481E23A14C7B22700384FE4 /* Tuesday.jpg */; };
+		C48AAC9114C9AD23009E208F /* Friday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C48AAC9014C9AD23009E208F /* Friday.jpg */; };
 		C48E1E2014B56C9C00C18762 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C48E1E1C14B56C9C00C18762 /* libTestFlight.a */; };
 		C48E1E2114B56C9C00C18762 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = C48E1E1D14B56C9C00C18762 /* README.txt */; };
 		C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = C48E1E1E14B56C9C00C18762 /* release_notes.txt */; };
-		C48E5BB514BDCF5E00380DCB /* ths1.0.png in Resources */ = {isa = PBXBuildFile; fileRef = C48E5BB414BDCF5E00380DCB /* ths1.0.png */; };
+		C4CB06C814CA7F0B00207C3F /* Wednesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4CB06C714CA7F0B00207C3F /* Wednesday.jpg */; };
+		C4D37D8F14C7509000A10A16 /* paper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4D37D8E14C7509000A10A16 /* paper.jpg */; };
+		C4D37D9D14C77F8700A10A16 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D37D9C14C77F8700A10A16 /* menu@2x.png */; };
+		C4D37D9F14C77FB000A10A16 /* gears@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D37D9E14C77FB000A10A16 /* gears@2x.png */; };
+		C4D37DA114C77FE700A10A16 /* schedule@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D37DA014C77FE700A10A16 /* schedule@2x.png */; };
+		C4D37DA314C7809A00A10A16 /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4D37DA214C7809A00A10A16 /* home@2x.png */; };
 		C4D9F67C14B29FD100D87536 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D9F67B14B29FD100D87536 /* UIKit.framework */; };
 		C4D9F67E14B29FD100D87536 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D9F67D14B29FD100D87536 /* Foundation.framework */; };
 		C4D9F68014B29FD100D87536 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4D9F67F14B29FD100D87536 /* CoreGraphics.framework */; };
@@ -34,12 +46,7 @@
 		C4E0143F14B2A30900FADF36 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E0143D14B2A30800FADF36 /* ThirdViewController.m */; };
 		C4E0144014B2A30900FADF36 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */; };
 		C4E0144214B2A33600FADF36 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E0144114B2A33600FADF36 /* menu.png */; };
-		C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC114BC020800B3D298 /* Tuesday.jpg */; };
-		C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC314BC037100B3D298 /* Monday.jpg */; };
-		C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E37FC514BC044400B3D298 /* Wednesday.jpg */; };
 		C4EED59B14BE84350090483A /* gears.png in Resources */ = {isa = PBXBuildFile; fileRef = C4EED59A14BE84340090483A /* gears.png */; };
-		C4EED5AB14BE85760090483A /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EED5A914BE85760090483A /* FourthViewController.m */; };
-		C4EED5AC14BE85760090483A /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EED5AA14BE85760090483A /* FourthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,15 +60,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C40B53A614BFB72D00D517CB /* chalk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chalk.jpg; sourceTree = "<group>"; };
+		C40AA51614C7DC0E0032F117 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		C40AA51714C7DC0E0032F117 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		C433290814C7B2D600309201 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		C433290914C7B2D600309201 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		C433290A14C7B2D600309201 /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
 		C447AF1B14C0AFA5002D97FD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C447AF1E14C0AFB9002D97FD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C481E23814C7B22700384FE4 /* Monday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monday.jpg; sourceTree = "<group>"; };
+		C481E23914C7B22700384FE4 /* Thursday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Thursday.jpg; sourceTree = "<group>"; };
+		C481E23A14C7B22700384FE4 /* Tuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tuesday.jpg; sourceTree = "<group>"; };
+		C48AAC9014C9AD23009E208F /* Friday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Friday.jpg; sourceTree = "<group>"; };
 		C48E1E1C14B56C9C00C18762 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		C48E1E1D14B56C9C00C18762 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		C48E1E1E14B56C9C00C18762 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		C48E1E1F14B56C9C00C18762 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		C48E5BB414BDCF5E00380DCB /* ths1.0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ths1.0.png; sourceTree = "<group>"; };
-		C4D9F67714B29FD100D87536 /* Haverford.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haverford.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CB06C714CA7F0B00207C3F /* Wednesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wednesday.jpg; sourceTree = "<group>"; };
+		C4D37D8E14C7509000A10A16 /* paper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper.jpg; sourceTree = "<group>"; };
+		C4D37D9C14C77F8700A10A16 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		C4D37D9E14C77FB000A10A16 /* gears@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gears@2x.png"; sourceTree = "<group>"; };
+		C4D37DA014C77FE700A10A16 /* schedule@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedule@2x.png"; sourceTree = "<group>"; };
+		C4D37DA214C7809A00A10A16 /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home@2x.png"; sourceTree = "<group>"; };
+		C4D9F67714B29FD100D87536 /* Haverford School.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Haverford School.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D9F67B14B29FD100D87536 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C4D9F67D14B29FD100D87536 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4D9F67F14B29FD100D87536 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,13 +109,7 @@
 		C4E0143D14B2A30800FADF36 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
 		C4E0144114B2A33600FADF36 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
-		C4E37FC114BC020800B3D298 /* Tuesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tuesday.jpg; sourceTree = "<group>"; };
-		C4E37FC314BC037100B3D298 /* Monday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Monday.jpg; sourceTree = "<group>"; };
-		C4E37FC514BC044400B3D298 /* Wednesday.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Wednesday.jpg; sourceTree = "<group>"; };
 		C4EED59A14BE84340090483A /* gears.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gears.png; sourceTree = "<group>"; };
-		C4EED5A814BE85760090483A /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
-		C4EED5A914BE85760090483A /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
-		C4EED5AA14BE85760090483A /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,9 +151,10 @@
 		C4D9F66C14B29FD100D87536 = {
 			isa = PBXGroup;
 			children = (
+				C40AA51614C7DC0E0032F117 /* Icon.png */,
+				C40AA51714C7DC0E0032F117 /* Icon@2x.png */,
 				C447AF1E14C0AFB9002D97FD /* Default@2x.png */,
 				C447AF1B14C0AFA5002D97FD /* Default.png */,
-				C48E5BB414BDCF5E00380DCB /* ths1.0.png */,
 				C48E1E1B14B56C9C00C18762 /* TestFlightSDK0 */,
 				C4D9F68114B29FD100D87536 /* Haverford */,
 				C4D9F6AD14B29FD200D87536 /* HaverfordTests */,
@@ -151,7 +166,7 @@
 		C4D9F67814B29FD100D87536 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C4D9F67714B29FD100D87536 /* Haverford.app */,
+				C4D9F67714B29FD100D87536 /* Haverford School.app */,
 				C4D9F6A614B29FD200D87536 /* HaverfordTests.octest */,
 			);
 			name = Products;
@@ -182,17 +197,23 @@
 				C4E0143C14B2A30800FADF36 /* ThirdViewController.h */,
 				C4E0143D14B2A30800FADF36 /* ThirdViewController.m */,
 				C4E0143E14B2A30800FADF36 /* ThirdViewController.xib */,
-				C4EED5A814BE85760090483A /* FourthViewController.h */,
-				C4EED5A914BE85760090483A /* FourthViewController.m */,
-				C4EED5AA14BE85760090483A /* FourthViewController.xib */,
-				C40B53A614BFB72D00D517CB /* chalk.jpg */,
+				C433290814C7B2D600309201 /* FourthViewController.h */,
+				C433290914C7B2D600309201 /* FourthViewController.m */,
+				C433290A14C7B2D600309201 /* FourthViewController.xib */,
+				C4D37D8E14C7509000A10A16 /* paper.jpg */,
 				C4E0143314B2A25D00FADF36 /* home.png */,
+				C4D37DA214C7809A00A10A16 /* home@2x.png */,
 				C4E0143514B2A2BE00FADF36 /* schedule.png */,
+				C4D37DA014C77FE700A10A16 /* schedule@2x.png */,
 				C4EED59A14BE84340090483A /* gears.png */,
+				C4D37D9E14C77FB000A10A16 /* gears@2x.png */,
 				C4E0144114B2A33600FADF36 /* menu.png */,
-				C4E37FC314BC037100B3D298 /* Monday.jpg */,
-				C4E37FC114BC020800B3D298 /* Tuesday.jpg */,
-				C4E37FC514BC044400B3D298 /* Wednesday.jpg */,
+				C4D37D9C14C77F8700A10A16 /* menu@2x.png */,
+				C481E23814C7B22700384FE4 /* Monday.jpg */,
+				C481E23A14C7B22700384FE4 /* Tuesday.jpg */,
+				C4CB06C714CA7F0B00207C3F /* Wednesday.jpg */,
+				C481E23914C7B22700384FE4 /* Thursday.jpg */,
+				C48AAC9014C9AD23009E208F /* Friday.jpg */,
 				C4D9F68214B29FD100D87536 /* Supporting Files */,
 			);
 			path = Haverford;
@@ -245,7 +266,7 @@
 			);
 			name = Haverford;
 			productName = Haverford;
-			productReference = C4D9F67714B29FD100D87536 /* Haverford.app */;
+			productReference = C4D9F67714B29FD100D87536 /* Haverford School.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C4D9F6A514B29FD200D87536 /* HaverfordTests */ = {
@@ -307,15 +328,22 @@
 				C4E0144214B2A33600FADF36 /* menu.png in Resources */,
 				C48E1E2114B56C9C00C18762 /* README.txt in Resources */,
 				C48E1E2214B56C9C00C18762 /* release_notes.txt in Resources */,
-				C4E37FC214BC020800B3D298 /* Tuesday.jpg in Resources */,
-				C4E37FC414BC037100B3D298 /* Monday.jpg in Resources */,
-				C4E37FC614BC044400B3D298 /* Wednesday.jpg in Resources */,
-				C48E5BB514BDCF5E00380DCB /* ths1.0.png in Resources */,
 				C4EED59B14BE84350090483A /* gears.png in Resources */,
-				C4EED5AC14BE85760090483A /* FourthViewController.xib in Resources */,
-				C40B53A714BFB72D00D517CB /* chalk.jpg in Resources */,
 				C447AF1C14C0AFA5002D97FD /* Default.png in Resources */,
 				C447AF1F14C0AFB9002D97FD /* Default@2x.png in Resources */,
+				C4D37D8F14C7509000A10A16 /* paper.jpg in Resources */,
+				C4D37D9D14C77F8700A10A16 /* menu@2x.png in Resources */,
+				C4D37D9F14C77FB000A10A16 /* gears@2x.png in Resources */,
+				C4D37DA114C77FE700A10A16 /* schedule@2x.png in Resources */,
+				C4D37DA314C7809A00A10A16 /* home@2x.png in Resources */,
+				C481E23D14C7B22700384FE4 /* Monday.jpg in Resources */,
+				C481E23E14C7B22700384FE4 /* Thursday.jpg in Resources */,
+				C481E23F14C7B22700384FE4 /* Tuesday.jpg in Resources */,
+				C433290C14C7B2D600309201 /* FourthViewController.xib in Resources */,
+				C40AA51814C7DC0E0032F117 /* Icon.png in Resources */,
+				C40AA51914C7DC0E0032F117 /* Icon@2x.png in Resources */,
+				C48AAC9114C9AD23009E208F /* Friday.jpg in Resources */,
+				C4CB06C814CA7F0B00207C3F /* Wednesday.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +383,7 @@
 				C4D9F68F14B29FD100D87536 /* FirstViewController.m in Sources */,
 				C4D9F69614B29FD100D87536 /* SecondViewController.m in Sources */,
 				C4E0143F14B2A30900FADF36 /* ThirdViewController.m in Sources */,
-				C4EED5AB14BE85760090483A /* FourthViewController.m in Sources */,
+				C433290B14C7B2D600309201 /* FourthViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +474,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -473,7 +501,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Haverford School";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -484,7 +512,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Haverford/Haverford-Prefix.pch";
 				INFOPLIST_FILE = "Haverford/Haverford-Info.plist";
@@ -492,7 +520,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Haverford School";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -539,7 +567,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -559,7 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Haverford/Haverford-Prefix.pch";
 				INFOPLIST_FILE = "Haverford/Haverford-Info.plist";
@@ -567,7 +595,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0\"",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Haverford School";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;

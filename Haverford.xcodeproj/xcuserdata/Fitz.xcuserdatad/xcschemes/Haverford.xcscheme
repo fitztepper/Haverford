@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C4D9F67614B29FD100D87536"
-               BuildableName = "Haverford.app"
+               BuildableName = "Haverford School.app"
                BlueprintName = "Haverford"
                ReferencedContainer = "container:Haverford.xcodeproj">
             </BuildableReference>
@@ -42,7 +42,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C4D9F67614B29FD100D87536"
-            BuildableName = "Haverford.app"
+            BuildableName = "Haverford School.app"
             BlueprintName = "Haverford"
             ReferencedContainer = "container:Haverford.xcodeproj">
          </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C4D9F67614B29FD100D87536"
-            BuildableName = "Haverford.app"
+            BuildableName = "Haverford School.app"
             BlueprintName = "Haverford"
             ReferencedContainer = "container:Haverford.xcodeproj">
          </BuildableReference>
@@ -78,7 +78,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C4D9F67614B29FD100D87536"
-            BuildableName = "Haverford.app"
+            BuildableName = "Haverford School.app"
             BlueprintName = "Haverford"
             ReferencedContainer = "container:Haverford.xcodeproj">
          </BuildableReference>
