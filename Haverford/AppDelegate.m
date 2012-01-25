@@ -49,6 +49,9 @@
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController3, viewController2, viewController4,  nil];
     self.window.rootViewController = self.tabBarController;
+
+    NSLog(@"Loading view %@ - testing: %@", viewController3.view, @"just a test");
+
     [self.window makeKeyAndVisible];
     return YES;
 }
