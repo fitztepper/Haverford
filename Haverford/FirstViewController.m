@@ -127,26 +127,26 @@
     NSInteger weekday   = [components weekday];
     switch(weekday){
         case 1: // sunday
-            image.image = [UIImage imageNamed:@"Monday.jpg"];
+            image.image = [UIImage imageNamed:@"day1.jpg"];
             break;
         case 2: // monday
-            image.image = [UIImage imageNamed:@"Monday.jpg"];
+            image.image = [UIImage imageNamed:@"day1.jpg"];
             
             break;
         case 3: //tuesday
-            image.image = [UIImage imageNamed:@"Tuesday.jpg"];
+            image.image = [UIImage imageNamed:@"day2.jpg"];
             break;
         case 4: //wednesday
-            image.image = [UIImage imageNamed:@"Wednesday.jpg"];
+            image.image = [UIImage imageNamed:@"day3.jpg"];
             break;
         case 5: //thursday
-            image.image = [UIImage imageNamed:@"Thursday.jpg"];
+            image.image = [UIImage imageNamed:@"day4.jpg"];
             break;
         case 6: // friday
-            image.image = [UIImage imageNamed:@"Friday.jpg"];
+            image.image = [UIImage imageNamed:@"day5.jpg"];
             break;
         case 7: // saturday
-            image.image = [UIImage imageNamed:@"Monday.jpg"];
+            image.image = [UIImage imageNamed:@"day1.jpg"];
             break;
             
             }
