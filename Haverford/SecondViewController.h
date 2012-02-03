@@ -11,17 +11,24 @@
 
 @interface SecondViewController : UIViewController <UIScrollViewDelegate> {
     IBOutlet UIWebView *webview;
-    UIScrollView* scrollView;
-	UIPageControl* pageControl;
-    
-    BOOL pageControlBeingUsed;
+    IBOutlet UIScrollView* scrollView;
+	IBOutlet UIPageControl* pageControl;
+	
+    BOOL pageControlIsChangingPage;
+
+
 
     
 }
-
+@property (nonatomic, retain) UIView *scrollView;
+@property (nonatomic, retain) UIPageControl* pageControl;
 @property (nonatomic, retain) UIWebView *webview;
-@property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
-@property (nonatomic, retain) IBOutlet UIPageControl* pageControl;
+
+/* for pageControl */
+- (IBAction)changePage:(id)sender;
+
+/* internal */
+- (void)setupPage;
 
 
 @end

@@ -15,11 +15,8 @@
 @synthesize webview;
 @synthesize scrollView;
 @synthesize pageControl;
-
-const CGFloat kScrollObjHeight	= 300.0;
-const CGFloat kScrollObjWidth	= 255.0;
-const NSUInteger kNumImages		= 5;
-
+const CGFloat kScrollObjHeight	= 300;
+const CGFloat kScrollObjWidth	= 255;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,60 +37,7 @@ const NSUInteger kNumImages		= 5;
 #pragma mark - View lifecycle
 
 
-- (void)layoutScrollImages
-{
-	UIImageView *view = nil;
-	NSArray *subviews = [scrollView subviews];
-    
-	// reposition all image subviews in a horizontal serial fashion
-	CGFloat curXLoc = 0;
-	for (view in subviews)
-	{
-		if ([view isKindOfClass:[UIImageView class]] && view.tag > 0)
-		{
-			CGRect frame = view.frame;
-			frame.origin = CGPointMake(curXLoc, 0);
-			view.frame = frame;
-			
-			curXLoc += (kScrollObjWidth);
-		}
-	}
-	
-	// set the content size so it can be scrollable
-	[scrollView setContentSize:CGSizeMake((kNumImages * kScrollObjWidth), [scrollView bounds].size.height)];
-}
 
-
-- (void)scrollViewDidScroll:(UIScrollView *)sender {
-	if (!pageControlBeingUsed) {
-		// Switch the indicator when more than 50% of the previous/next page is visible
-		int page = floor((self.scrollView.contentOffset.x));
-		self.pageControl.currentPage = page;
-	}
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-	pageControlBeingUsed = NO;
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-	pageControlBeingUsed = NO;
-}
-
-- (IBAction)changePage {
-	// Update the scroll view to the appropriate page
-	CGRect frame;
-	frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
-	frame.origin.y = 0;
-	frame.size = self.scrollView.frame.size;
-	[self.scrollView scrollRectToVisible:frame animated:YES];
-	
-	// Keep track of when scrolls happen in response to the page control
-	// value changing. If we don't do this, a noticeable "flashing" occurs
-	// as the the scroll delegate will temporarily switch back the page
-	// number.
-	pageControlBeingUsed = NO;
-}
 
 - (void)viewDidLoad
 {
@@ -111,36 +55,100 @@ const NSUInteger kNumImages		= 5;
     
     [[self view] addSubview:scrollView];
     
+	[self setupPage];
 
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
     
+   
     
+}
+
+
+#pragma mark The Guts
+- (void)setupPage
+{
+	scrollView.delegate = self;
     
-    // 1. setup the scrollview for multiple images and add it to the view controller
-	//
-		
-	// load all the images from our bundle and add them to the scroll view
-	NSUInteger i;
-	for (i = 1; i <= kNumImages; i++)
-	{
-		NSString *imageName = [NSString stringWithFormat:@"day%d.jpg", i];
+	[self.scrollView setBackgroundColor:[UIColor blackColor]];
+	[scrollView setCanCancelContentTouches:NO];
+	
+	scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+	scrollView.clipsToBounds = YES;
+	scrollView.scrollEnabled = YES;
+	scrollView.pagingEnabled = YES;
+	
+
+    
+	NSUInteger nimages = 0;
+	CGFloat cx = 0;
+	for (; ; nimages++) {
+		NSString *imageName = [NSString stringWithFormat:@"day%d.jpg", (nimages + 1)];
 		UIImage *image = [UIImage imageNamed:imageName];
+		if (image == nil) {
+			break;
+		}
 		UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
 		
-		// setup each frame to a default height and width, it will be properly placed when we call "updateScrollList"
 		CGRect rect = imageView.frame;
 		rect.size.height = kScrollObjHeight;
 		rect.size.width = kScrollObjWidth;
+		rect.origin.x = ((scrollView.frame.size.width - image.size.width) / 2) + cx;
+		rect.origin.y = ((scrollView.frame.size.height - image.size.height) / 2);
+        
 		imageView.frame = rect;
-		imageView.tag = i;	// tag our images for later use when we place them in serial fashion
+        
 		[scrollView addSubview:imageView];
+        
+		cx += scrollView.frame.size.width;
 	}
 	
-	[self layoutScrollImages];	// now place the photos in serial layout within the scrollview
+	self.pageControl.numberOfPages = nimages;
+	[scrollView setContentSize:CGSizeMake(cx, [scrollView bounds].size.height)];
 }
 
+#pragma mark -
+#pragma mark UIScrollViewDelegate stuff
+- (void)scrollViewDidScroll:(UIScrollView *)_scrollView
+{
+    if (pageControlIsChangingPage) {
+        return;
+    }
     
+	/*
+	 *	We switch page at 50% across
+	 */
+    CGFloat pageWidth = _scrollView.frame.size.width;
+    int page = floor((_scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+    pageControl.currentPage = page;
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)_scrollView 
+{
+    pageControlIsChangingPage = NO;
+}
+
+#pragma mark -
+#pragma mark PageControl stuff
+- (IBAction)changePage:(id)sender 
+{
+	/*
+	 *	Change the scroll view
+	 */
+    CGRect frame = scrollView.frame;
+    frame.origin.x = frame.size.width * pageControl.currentPage;
+    frame.origin.y = 0;
+	
+    [scrollView scrollRectToVisible:frame animated:YES];
+    
+	/*
+	 *	When the animated scrolling finishings, scrollViewDidEndDecelerating will turn this off
+	 */
+    pageControlIsChangingPage = YES;
+}
+
+
+
 
 
 
