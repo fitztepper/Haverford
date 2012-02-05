@@ -73,7 +73,7 @@ const CGFloat kScrollObjWidth	= 255;
 	[self.scrollView setBackgroundColor:[UIColor blackColor]];
 	[scrollView setCanCancelContentTouches:NO];
 	
-	scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+	scrollView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
 	scrollView.clipsToBounds = YES;
 	scrollView.scrollEnabled = YES;
 	scrollView.pagingEnabled = YES;
@@ -93,8 +93,8 @@ const CGFloat kScrollObjWidth	= 255;
 		CGRect rect = imageView.frame;
 		rect.size.height = kScrollObjHeight;
 		rect.size.width = kScrollObjWidth;
-		rect.origin.x = ((scrollView.frame.size.width - image.size.width) / 2) + cx;
-		rect.origin.y = ((scrollView.frame.size.height - image.size.height) / 2);
+		rect.origin.x = cx;
+		rect.origin.y = ((scrollView.frame.size.height - image.size.height) / 100);
         
 		imageView.frame = rect;
         
