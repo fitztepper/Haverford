@@ -16,6 +16,6 @@
     
 }
 
-@property (nonatomic, retain) UIWebView *webview;
+@property (nonatomic, strong) UIWebView *webview;
 
 @end

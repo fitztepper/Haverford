@@ -18,17 +18,28 @@
 
 #import "FourthViewController.h"
 
+#import "FifthViewController.h"
+
+#import "DetailViewController.h"
+
 
 @implementation AppDelegate
 
-@synthesize window = _window;
+@synthesize window2;
+@synthesize window;
+
 @synthesize tabBarController = _tabBarController;
+@synthesize navigationController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 
 {
+    [window2 addSubview:[navigationController view]];
+    
+	[window2 makeKeyAndVisible];
+    
+
     sleep(1);
 
 
@@ -45,10 +56,16 @@
     UIViewController *viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
     
     UIViewController *viewController4 = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
-
+    
+    UITableViewController *viewController5 = [[FifthViewController alloc] initWithNibName:@"FifthViewController" bundle:nil];
+    
+  
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController3, viewController2, viewController4,  nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController3, viewController2, viewController5, viewController4,  nil];
     self.window.rootViewController = self.tabBarController;
+    
+    
+    
 
     NSLog(@"Loading view %@ - testing: %@", viewController3.view, @"just a test");
 

@@ -20,9 +20,9 @@
 
     
 }
-@property (nonatomic, retain) UIView *scrollView;
-@property (nonatomic, retain) UIPageControl* pageControl;
-@property (nonatomic, retain) UIWebView *webview;
+@property (nonatomic, strong) UIView *scrollView;
+@property (nonatomic, strong) UIPageControl* pageControl;
+@property (nonatomic, strong) UIWebView *webview;
 
 /* for pageControl */
 - (IBAction)changePage:(id)sender;

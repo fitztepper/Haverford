@@ -12,14 +12,12 @@
 @interface FirstViewController : UIViewController {
     
     IBOutlet UILabel *currentdate;
-    IBOutlet UILabel *currenttime;
     IBOutlet UILabel *letterday;
 
     IBOutlet UIImageView *image;
-    IBOutlet UIWebView *webview;
 }
 
-@property (nonatomic, retain) UIWebView *webview;
+@property (nonatomic, strong) UIWebView *webview;
 
 
 @end

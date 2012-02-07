@@ -112,14 +112,14 @@
     
     
     //get the time today
-    NSDateFormatter *timeformatter = [[NSDateFormatter alloc] init];
-    [timeformatter setDateFormat:@"hh:mm a"];
+    //NSDateFormatter *timeformatter = [[NSDateFormatter alloc] init];
+    //[timeformatter setDateFormat:@"hh:mm a"];
     
-    NSString *timeToday = [timeformatter stringFromDate:[NSDate date]];
+    //NSString *timeToday = [timeformatter stringFromDate:[NSDate date]];
     
-    [currenttime setText:timeToday];
+   // [currenttime setText:timeToday];
 
-    [super viewDidAppear:animated];
+    //[super viewDidAppear:animated];
     
     //get the day of week
     
