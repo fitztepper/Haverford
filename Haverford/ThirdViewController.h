@@ -7,14 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TestFlight.h"
 
 
 @interface ThirdViewController : UIViewController{
+    
     IBOutlet UIWebView *webview;
-    
-    
+     IBOutlet UIButton *usLunch;
+     IBOutlet UIButton *lsLunch;
 }
+
+- (void)showLowerSchoolLunchMenu;
+- (void)showUpperSchoolLunchMenu;
+
+- (IBAction)didChangeSegmentedControlValue:(UISegmentedControl *)segmentedControl;
 
 @property (nonatomic, strong) UIWebView *webview;
 

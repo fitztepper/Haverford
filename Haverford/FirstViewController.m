@@ -8,7 +8,6 @@
 
 #import "FirstViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "TestFlight.h"
 
 @implementation FirstViewController
 @synthesize webview;
@@ -19,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Home", @"Home");
+        self.title = NSLocalizedString(@"US", @"US");
         self.tabBarItem.image = [UIImage imageNamed:@"home"];
         
 
@@ -39,37 +38,37 @@
 
 - (void)viewDidLoad
 {
-
     
     
     // Round corners using CALayer property
     
-    [[image layer] setCornerRadius:5];
-    [image setClipsToBounds:YES];
+    [[borders layer] setCornerRadius:5];
+    [borders setClipsToBounds:YES];
     
      //Create colored border using CALayer property 
-   [[image layer] setBorderColor:
+   [[borders layer] setBorderColor:
      [[UIColor colorWithRed:0 green:0. blue:0 alpha:1] CGColor]];
      [[UIColor colorWithWhite:1 alpha:1] CGColor];
-    [[image layer] setBorderWidth:2.75];
+    [[borders layer] setBorderWidth:2.75];
     
-    [[self view] addSubview:image];
-
+    [[self view] addSubview:borders];
+    
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
 
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    /*
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(becomeActive:)
                                                  name:UIApplicationDidBecomeActiveNotification
                                                object:nil];
+     */
     
     
 }
-
-
+/*
+///WHAT DOES THIS DO????????
 -(void)becomeActive:(NSNotification *)notification {
     // only respond if the selected tab is our current tab
     if (self.tabBarController.selectedIndex == 0) { // Tab 1 is 0 index, Tab 2 is 1, etc 
@@ -78,7 +77,7 @@
     
     
 }
-
+*/
 
 - (void)viewDidUnload
 
@@ -99,6 +98,9 @@
 - (void)viewDidAppear:(BOOL)animated
 
 {
+    NSLog(@"View did appear: %@.", self.class);
+    [TestFlight passCheckpoint:@"Home Page"];
+
     
     //get the date today
     
@@ -127,26 +129,26 @@
     NSInteger weekday   = [components weekday];
     switch(weekday){
         case 1: // sunday
-            image.image = [UIImage imageNamed:@"day1.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Monday.png"];
             break;
         case 2: // monday
-            image.image = [UIImage imageNamed:@"day1.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Monday.png"];
             
             break;
         case 3: //tuesday
-            image.image = [UIImage imageNamed:@"day2.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Tuesday.png"];
             break;
         case 4: //wednesday
-            image.image = [UIImage imageNamed:@"day3.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Wednesday.png"];
             break;
         case 5: //thursday
-            image.image = [UIImage imageNamed:@"day4.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Thursday.png"];
             break;
         case 6: // friday
-            image.image = [UIImage imageNamed:@"day5.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Friday.png"];
             break;
         case 7: // saturday
-            image.image = [UIImage imageNamed:@"day1.jpg"];
+            classtimes.image = [UIImage imageNamed:@"Monday.png"];
             break;
             
             }
@@ -228,26 +230,26 @@
     [dictionary setObject:@"G Day" forKey:@"2012-03-14"];
 
     [dictionary setObject:@"A Day" forKey:@"2012-03-15"];
-    [dictionary setObject:@"Conferences" forKey:@"2012-03-16"];
+    [dictionary setObject:@"B Day" forKey:@"2012-03-16"];
     [dictionary setObject:@"B Day" forKey:@"2012-03-17"];
     [dictionary setObject:@"B Day" forKey:@"2012-03-18"];
     [dictionary setObject:@"B Day" forKey:@"2012-03-19"];
     [dictionary setObject:@"C Day" forKey:@"2012-03-20"];
     [dictionary setObject:@"D Day" forKey:@"2012-03-21"];
     [dictionary setObject:@"E Day" forKey:@"2012-03-22"];
-    [dictionary setObject:@"Spring Break" forKey:@"2012-03-23"];
-    [dictionary setObject:@"Spring Break" forKey:@"2012-03-26"];
-    [dictionary setObject:@"Spring Break" forKey:@"2012-03-27"];
-    [dictionary setObject:@"Spring Break" forKey:@"2012-03-28"];
-    [dictionary setObject:@"Spring Break" forKey:@"2012-03-29"];
-    [dictionary setObject:@"Spring Break" forKey:@"2012-03-30"];
+    [dictionary setObject:@"F Day" forKey:@"2012-03-23"];
+    [dictionary setObject:@"F Day" forKey:@"2012-03-26"];
+    [dictionary setObject:@"F Day" forKey:@"2012-03-27"];
+    [dictionary setObject:@"F Day" forKey:@"2012-03-28"];
+    [dictionary setObject:@"F Day" forKey:@"2012-03-29"];
+    [dictionary setObject:@"F Day" forKey:@"2012-03-30"];
     [dictionary setObject:@"F Day" forKey:@"2012-04-01"];
     [dictionary setObject:@"F Day" forKey:@"2012-04-02"];
     [dictionary setObject:@"G Day" forKey:@"2012-04-03"];
 
     [dictionary setObject:@"A Day" forKey:@"2012-04-04"];
     [dictionary setObject:@"B Day" forKey:@"2012-04-05"];
-    [dictionary setObject:@"Good Friday" forKey:@"2012-04-06"];
+    [dictionary setObject:@"C Day" forKey:@"2012-04-06"];
     [dictionary setObject:@"C Day" forKey:@"2012-04-07"];
     [dictionary setObject:@"C Day" forKey:@"2012-04-08"];
     [dictionary setObject:@"C Day" forKey:@"2012-04-09"];
@@ -302,7 +304,7 @@
     
     [dictionary setObject:@"A Day" forKey:@"2012-05-24"];
     [dictionary setObject:@"B Day" forKey:@"2012-05-25"];
-    [dictionary setObject:@"Memorial Day" forKey:@"2012-05-28"];
+    [dictionary setObject:@"X Day" forKey:@"2012-05-28"];
     [dictionary setObject:@"X Day" forKey:@"2012-05-29"];
     [dictionary setObject:@"X Day" forKey:@"2012-05-30"];
     [dictionary setObject:@"Final Exams" forKey:@"2012-05-31"];
@@ -321,6 +323,22 @@
     
     //[letterday setText:LetterDay];
     [letterday setText:[dictionary objectForKey:LetterDay]];
+    
+    
+    NSMutableDictionary *imageforlabel = [[NSMutableDictionary alloc] init];
+
+                     
+                    [imageforlabel setObject:[UIImage imageNamed:@"Aday.png"] forKey:@"A Day"];
+                    [imageforlabel setObject:[UIImage imageNamed:@"Bday.png"] forKey:@"B Day"];
+                    [imageforlabel setObject:[UIImage imageNamed:@"Cday.png"] forKey:@"C Day"];
+                    [imageforlabel setObject:[UIImage imageNamed:@"Dday.png"] forKey:@"D Day"];
+                    [imageforlabel setObject:[UIImage imageNamed:@"Eday.png"] forKey:@"E Day"];
+                    [imageforlabel setObject:[UIImage imageNamed:@"Fday.png"] forKey:@"F Day"];
+                    [imageforlabel setObject:[UIImage imageNamed:@"Gday.png"] forKey:@"G Day"];
+                     
+    rotationday.image = [imageforlabel objectForKey:letterday.text];
+    
+
 
 }
 

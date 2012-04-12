@@ -31,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 	
 	//Initialize the array.
 	listOfItems = [[NSMutableArray alloc] init];
@@ -39,23 +40,37 @@
 	NSDictionary *adminTeachersDict = [NSDictionary dictionaryWithObject:adminTeachersArray forKey:@"Teachers"];
     
 	
-	NSArray *scienceTeachersArray = [NSArray arrayWithObjects:@"Mr. Becker", @"Mrs. Cleffi", @"Mr. Deasey", @"Mr. Maley", @"Ms. O'Brien", @"Mr. Rooney", @"Mr. Trocano", nil];
+	NSArray *scienceTeachersArray = [NSArray arrayWithObjects:@"Mr. Alford", @"Mr. Becker", @"Ms. Bardell",@"Mrs. Cleffi", @"Mr. Deasey", @"Mr. Maley", @"Ms. O'Brien", @"Mr. Rooney", @"Mr. Trocano", nil];
 	NSDictionary *scienceTeachersDict = [NSDictionary dictionaryWithObject:scienceTeachersArray forKey:@"Teachers"];
 	
-	NSArray *mathTeachersArray = [NSArray arrayWithObjects:@"Mr. Gaudreau", @"Dr. Gottlieb", @"Mr. Loving", @"Mr. Murtha", @"Mr. Patrylak", @"Mr. Sweeney", nil];
+	NSArray *mathTeachersArray = [NSArray arrayWithObjects:@"Mr. Gaudreau", @"Dr. Gottlieb", @"Mr. Loving", @"Mr. Murtha", @"Mr. Patrylak", @"Mr. Sweeney", @"Mr. Upton", @"Mr. Walters", nil];
 	NSDictionary *mathTeachersDict = [NSDictionary dictionaryWithObject:mathTeachersArray forKey:@"Teachers"];
     
-    NSArray *englishTeachersArray = [NSArray arrayWithObjects:@"Mrs. Davis", @"Mr. Graham", @"Mr. Keefe", @"Mr. Scibilia", @"Ms. Smedley", @"Mr. Stambaugh", nil];
+    NSArray *englishTeachersArray = [NSArray arrayWithObjects:@"Mrs. Davis", @"Mr. Graham", @"Mr. Keefe", @"Mr. Kolade", @"Mr. Scibilia", @"Ms. Smedley", @"Mr. Stambaugh", @"Mr. Slack", nil];
 	NSDictionary *englishTeachersDict = [NSDictionary dictionaryWithObject:englishTeachersArray forKey:@"Teachers"];
     
     NSArray *historyTeachersArray = [NSArray arrayWithObjects:@"Mr. Fifer", @"Mr. Griffin", @"Mr. Hart", @"Mr. Miller", @"Mr. Tirado", @"Mr. Tryon", @"Dr. Ehrhart", nil];
 	NSDictionary *historyTeachersDict = [NSDictionary dictionaryWithObject:historyTeachersArray forKey:@"Teachers"];
     
-    NSArray *languageTeachersArray = [NSArray arrayWithObjects:@"Ms. Atkins", @"Ms. David", @"Ms. Hsieh", @"Ms. Hulme", @"Mrs. Mateos-Hirshman", @"Mrs. Meier-Fernandez", nil];
+    NSArray *languageTeachersArray = [NSArray arrayWithObjects:@"Ms. Adkins", @"Ms. David", @"Dr. Fenton", @"Ms. Hsieh", @"Ms. Hulme", @"Mrs. Mateos-Hirshman", @"Mrs. Meier-Fernandez", @"Mr. Poolman", nil];
 	NSDictionary *languageTeachersDict = [NSDictionary dictionaryWithObject:languageTeachersArray forKey:@"Teachers"];
     
-    NSArray *arttheaterTeachersArray = [NSArray arrayWithObjects:@"Mr. Cloran", @"Mr. Fox", @"Mr. Frock", @"Mr. Nelson", nil];
+    NSArray *arttheaterTeachersArray = [NSArray arrayWithObjects:@"Mr. Cloran", @"Mr. Fox", @"Mr. Frock", @"Mr. Nelson", @"Mr. Ressler", @"Mr. Stairs", nil];
 	NSDictionary *arttheaterTeachersDict = [NSDictionary dictionaryWithObject:arttheaterTeachersArray forKey:@"Teachers"];
+    
+    
+    NSArray *learningTeachersArray = [NSArray arrayWithObjects:@"Mrs. Baroody", @"Mr. Stephen Cloran", @"Ms. Hudson", nil];
+	NSDictionary *learningTeachersDict = [NSDictionary dictionaryWithObject:learningTeachersArray forKey:@"Teachers"];
+
+    NSArray *admissionsTeachersArray = [NSArray arrayWithObjects:@"Mr. Fairfax", @"Mr. Knight", @"Ms. Tassoni", nil];
+	NSDictionary *admissionsTeachersDict = [NSDictionary dictionaryWithObject:admissionsTeachersArray forKey:@"Teachers"];
+    
+    NSArray *serviceLearningArray = [NSArray arrayWithObjects:@"Ms. Loos", nil];
+	NSDictionary *serviceLearningDict = [NSDictionary dictionaryWithObject:serviceLearningArray forKey:@"Teachers"];
+    
+    
+    NSArray *collegeArray = [NSArray arrayWithObjects:@"Mr. Cousins", @"Ms. Ley",@"Mr. Pearson", nil];
+	NSDictionary *collegeDict = [NSDictionary dictionaryWithObject:collegeArray forKey:@"Teachers"];
     
 	
     [listOfItems addObject:adminTeachersDict];
@@ -65,6 +80,12 @@
     [listOfItems addObject:historyTeachersDict];
     [listOfItems addObject:languageTeachersDict];
     [listOfItems addObject:arttheaterTeachersDict];
+    [listOfItems addObject:collegeDict];
+    [listOfItems addObject:learningTeachersDict];
+    [listOfItems addObject:admissionsTeachersDict];
+    [listOfItems addObject:serviceLearningDict];
+
+
     
     
 	
@@ -149,6 +170,18 @@
     else if(section == 6)
         return @"Art and Theater Teachers";
     
+    else if(section == 7)
+        return @"College Counseling";
+
+    else if(section == 8)
+        return @"Learning Center Staff";
+    
+    else if(section == 9)
+        return @"Admissions";
+    
+    else if(section == 10)
+        return @"Service Learning";
+    
     return nil;
 }
 
@@ -161,7 +194,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
    if (cell == nil) {
-       cell = [[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier];
+       cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
    }
     
     // Set up the cell...
@@ -170,7 +203,8 @@
 	NSDictionary *dictionary = [listOfItems objectAtIndex:indexPath.section];
 	NSArray *array = [dictionary objectForKey:@"Teachers"];
 	NSString *cellValue = [array objectAtIndex:indexPath.row];
-	cell.text = cellValue;
+	cell.textLabel.text = cellValue;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -192,12 +226,12 @@
 	dvController.selectedTeacher = selectedTeacher;
 	[self.navigationController pushViewController:dvController animated:YES];
 }
-
+/*
 - (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
 	
 	//return UITableViewCellAccessoryDetailDisclosureButton;
 	return UITableViewCellAccessoryDisclosureIndicator;
-}
+}*/
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
 	

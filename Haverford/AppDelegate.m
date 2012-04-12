@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "TestFlight.h"
 
 #import "FirstViewController.h"
 
@@ -35,6 +34,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 
 {
+    
+    [TestFlight takeOff:@"f7b0a50aefa6c32b12035fde0a47cef7_NTA1MjAyMDEyLTAxLTAxIDIxOjI2OjQ2LjU3MDIyMw"];
+
+    
     [window2 addSubview:[navigationController view]];
     
 	[window2 makeKeyAndVisible];
@@ -43,8 +46,6 @@
     sleep(1);
 
 
-    [TestFlight takeOff:@"f7b0a50aefa6c32b12035fde0a47cef7_NTA1MjAyMDEyLTAxLTAxIDIxOjI2OjQ2LjU3MDIyMw"];
-
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -52,22 +53,27 @@
     UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
     
     UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    
+
     UIViewController *viewController3 = [[ThirdViewController alloc] initWithNibName:@"ThirdViewController" bundle:nil];
     
     UIViewController *viewController4 = [[FourthViewController alloc] initWithNibName:@"FourthViewController" bundle:nil];
     
     UITableViewController *viewController5 = [[FifthViewController alloc] initWithNibName:@"FifthViewController" bundle:nil];
     
-  
+    UINavigationController *facultyNavigationController = [[UINavigationController alloc] init];
+    facultyNavigationController.viewControllers = [NSArray arrayWithObject:viewController5];
+    
     self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController3, viewController2, viewController5, viewController4,  nil];
+    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, viewController4, viewController3, facultyNavigationController,  nil];
     self.window.rootViewController = self.tabBarController;
     
     
     
-
-    NSLog(@"Loading view %@ - testing: %@", viewController3.view, @"just a test");
+    // Nasty hack to preload view controller 3's view so it's loaded by the time we navigate over to it.
+    // We do this by accessing the 'view' property, which forces the controller to go through its entire view loading cycle.
+    // It's not sufficient or correct to say [viewController3 loadView], because this sidesteps important parts of the cycle
+    // and is intended for programmatic view creation only.
+    viewController3.view.hidden = NO;
 
     [self.window makeKeyAndVisible];
     return YES;

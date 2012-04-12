@@ -2,33 +2,18 @@
 //  SecondViewController.h
 //  Haverford
 //
-//  Created by Fitz Tepper on 1/2/12.
+//  Created by Fitz Tepper on 4/9/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "TestFlight.h"
 
-@interface SecondViewController : UIViewController <UIScrollViewDelegate> {
-    IBOutlet UIWebView *webview;
-    IBOutlet UIScrollView* scrollView;
-	IBOutlet UIPageControl* pageControl;
-	
-    BOOL pageControlIsChangingPage;
-
-
-
+@interface SecondViewController : UIViewController {
     
+    IBOutlet UIView *borders;
+    IBOutlet UILabel *currentdate;
+    IBOutlet UILabel *letterday;
+
 }
-@property (nonatomic, strong) UIView *scrollView;
-@property (nonatomic, strong) UIPageControl* pageControl;
-@property (nonatomic, strong) UIWebView *webview;
-
-/* for pageControl */
-- (IBAction)changePage:(id)sender;
-
-/* internal */
-- (void)setupPage;
-
 
 @end

@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TestFlight.h"
 
 @interface FirstViewController : UIViewController {
     
     IBOutlet UILabel *currentdate;
     IBOutlet UILabel *letterday;
-
-    IBOutlet UIImageView *image;
+    IBOutlet UIImageView *rotationday;
+    IBOutlet UIView *borders;
+    IBOutlet UIImageView *classtimes;
 }
 
 @property (nonatomic, strong) UIWebView *webview;

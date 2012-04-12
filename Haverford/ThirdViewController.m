@@ -8,7 +8,6 @@
 
 #import "ThirdViewController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "TestFlight.h"
 
 
 @implementation ThirdViewController
@@ -25,6 +24,8 @@
         self.tabBarItem.image = [UIImage imageNamed:@"menu"];
     }
     return self;
+    
+   
   }
 
 - (void)didReceiveMemoryWarning
@@ -37,6 +38,8 @@
 
 - (void)viewDidLoad
 {
+    
+    
 // Round corners using CALayer property
 
 [[webview layer] setCornerRadius:10];
@@ -48,46 +51,82 @@
 // [[UIColor colorWithWhite:1 alpha:1] CGColor]];
 [[webview layer] setBorderWidth:2.75];
 
-[[self view] addSubview:webview];
 
     
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"paper.jpg"]];
     
     // ** So I think I used the method we talked about..I created three strings, one for first half of URL, one for the variable date section (Which I used NSDATE and arranged it into the same format Sodexo uses, and the third string for the final half of the url. Then I combined the Urls. It works now, but I guess we have no way to test it until Sodexo updates their new February Menu. Let me know what you think.
     
-    NSDate *date = [NSDate date];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"YYYYMM"];
-    NSString *dateString = [dateFormat stringFromDate:date];  
+   
     
-    NSString *firsturl = @"https://www.sodexoeducation.com/MenusPdf/";
-    
-    NSString *secondurl = @"_72_829_1_1.pdf";
-    
-    NSString *urlAddress = [NSString stringWithFormat:@"%@%@%@", firsturl, dateString, secondurl];
-    
-    //Create a URL object.
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    
-    //URL Requst Object
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    
-    //Load the request in the UIWebView.
-    [webview loadRequest:requestObj];
-    
-    
+
     
     
     
 
+    
+  
+    
+    
+    [self showUpperSchoolLunchMenu];
+
+    
+    
 
 [super viewDidLoad];
 // Do any additional setup after loading the view, typically from a nib.
 
 }
+
+- (void)showLowerSchoolLunchMenu {
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"YYYYMM"];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    
+    NSString *LSfirsturl = @"https://www.sodexoeducation.com/MenusPdf/";
+    
+    NSString *LSsecondurl = @"_72_829_2_1.pdf";
+    
+    NSString *LSurlAddress = [NSString stringWithFormat:@"%@%@%@", LSfirsturl, dateString, LSsecondurl];
+    
+    //Create a URL object.
+    NSURL *LSurl = [NSURL URLWithString:LSurlAddress];
+    
+    //URL Requst Object
+    NSURLRequest *LSrequestObj = [NSURLRequest requestWithURL:LSurl];
+    
+    //Load the request in the UIWebView.
+    [webview loadRequest:LSrequestObj];    
+}
+
+- (void)showUpperSchoolLunchMenu {
+    NSDate *date = [NSDate date];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"YYYYMM"];
+    NSString *dateString = [dateFormat stringFromDate:date];
+    
+    
+    NSString *USfirsturl = @"https://www.sodexoeducation.com/MenusPdf/";
+    
+    NSString *USsecondurl = @"_72_829_1_1.pdf";
+    
+    NSString *USurlAddress = [NSString stringWithFormat:@"%@%@%@", USfirsturl, dateString, USsecondurl];
+    
+    
+    //Create a URL object.
+    NSURL *USurl = [NSURL URLWithString:USurlAddress];
+    
+    //URL Requst Object
+    NSURLRequest *USrequestObj = [NSURLRequest requestWithURL:USurl];
+    
+    //Load the request in the UIWebView.
+    [webview loadRequest:USrequestObj];
+}
+
 - (void)viewDidUnload
 {
-    [super viewDidUnload];
+       [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -100,6 +139,10 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [TestFlight passCheckpoint:@"Lunch"];
+
+    
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -116,6 +159,17 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (IBAction)lunchswitch:(id)sender {
+}
+
+- (IBAction)didChangeSegmentedControlValue:(UISegmentedControl *)segmentedControl {
+    if(segmentedControl.selectedSegmentIndex == 0) {
+        [self showUpperSchoolLunchMenu];        
+    } else if(segmentedControl.selectedSegmentIndex == 1) {
+        [self showLowerSchoolLunchMenu];        
+    }
 }
 
 @end
